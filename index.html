@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Batalha Naval</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <main id="tela-inicio" class="tela">
+    <h1 class="titulo">Batalha Naval</h1>
+    <p class="subtitulo">Para dois jogadores no mesmo dispositivo</p>
+
+    <form id="form-jogadores" class="cartao" novalidate>
+      <label for="nome1">Jogador 1</label>
+      <input id="nome1" type="text" maxlength="20" autocomplete="off" placeholder="Nome do jogador 1">
+
+      <label for="nome2">Jogador 2</label>
+      <input id="nome2" type="text" maxlength="20" autocomplete="off" placeholder="Nome do jogador 2">
+
+      <p id="erro-nomes" class="erro" role="alert"></p>
+      <button type="submit" class="botao principal">Iniciar partida</button>
+    </form>
+
+    <section class="cartao regras">
+      <h2>Como funciona</h2>
+      <ul>
+        <li>Cada jogador tem uma frota em um tabuleiro 10 x 10: Porta-aviões (5 casas), Encouraçado (4), Submarino (3) e Destroier (2).</li>
+        <li>Os navios são posicionados automaticamente e ficam escondidos do adversário.</li>
+        <li>A cada vez, clique em uma casa do tabuleiro do adversário para atirar. Os jogadores se alternam depois de cada tiro.</li>
+        <li>Vence quem afundar todos os navios do adversário primeiro.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Tela de troca de jogador (esconde os tabuleiros) -->
+  <main id="tela-transicao" class="tela" hidden>
+    <div class="cartao centro">
+      <p id="transicao-mensagem" class="aviso"></p>
+      <h2 id="transicao-titulo"></h2>
+      <p>Passe o dispositivo para essa pessoa. Os tabuleiros só aparecem depois do clique.</p>
+      <button id="botao-pronto" type="button" class="botao principal">Estou pronto</button>
+    </div>
+  </main>
+
+  <!-- Tela da partida -->
+  <main id="tela-jogo" class="tela" hidden>
+    <h2 id="jogo-titulo" class="vez"></h2>
+    <p id="mensagem" class="mensagem" role="status"></p>
+
+    <div class="tabuleiros">
+      <section>
+        <h3>Tabuleiro do adversário</h3>
+        <div id="grade-ataque" class="grade"></div>
+        <ul id="frota-inimiga" class="frota"></ul>
+      </section>
+      <section>
+        <h3>Seu tabuleiro</h3>
+        <div id="grade-propria" class="grade"></div>
+        <ul id="frota-propria" class="frota"></ul>
+      </section>
+    </div>
+
+    <div class="acoes">
+      <button id="botao-encerrar" type="button" class="botao principal" hidden>Encerrar jogada</button>
+    </div>
+    <p id="dica" class="dica"></p>
+  </main>
+
+  <!-- Tela final -->
+  <main id="tela-fim" class="tela" hidden>
+    <div class="cartao centro">
+      <h2 id="fim-titulo"></h2>
+      <p id="fim-mensagem"></p>
+      <ul id="fim-frotas" class="lista-frotas"></ul>
+      <div class="acoes">
+        <button id="botao-nova" type="button" class="botao principal">Nova partida</button>
+        <button id="botao-trocar" type="button" class="botao">Trocar jogadores</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="batalha-naval.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

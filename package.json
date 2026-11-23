@@ -1,0 +1,13 @@
+{
+  "name": "desafio_batalha_naval",
+  "version": "1.0.0",
+  "description": "Lógica de Batalha Naval com testes automatizados (Testes de Software)",
+  "main": "batalha-naval.js",
+  "scripts": {
+    "test": "node --test test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "ISC"
+}
