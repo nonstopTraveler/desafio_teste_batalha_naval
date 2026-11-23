@@ -2,19 +2,27 @@
 
 Projeto da disciplina de Projeto, Implementação e Teste de Software. É um jogo de Batalha Naval para duas pessoas no mesmo dispositivo, que roda no navegador, com a lógica em JavaScript e casos de teste automatizados que garantem que as regras funcionam.
 
+## Colaboradores
+
+| Nome | RA |
+|---|---|
+| Danilo Antonio Alves Rosa | 24047644-2 |
+| Renan Homiak Guimarães | 24000668-2 |
+
 ## Regras implementadas
 
 - Tabuleiro de 10 x 10 (100 casas), linhas e colunas numeradas de 0 a 9.
 - 4 navios por tabuleiro:
 
 | Navio | Casas |
-| --- | --- |
+|---|---|
 | 1 Porta-aviões | 5 |
 | 1 Encouraçado | 4 |
 | 1 Submarino | 3 |
 | 1 Destroier | 2 |
 
-  Ao todo são 14 casas ocupadas.
+Ao todo são 14 casas ocupadas.
+
 - Os navios ficam na horizontal ou na vertical e não podem sair do tabuleiro.
 - Navios não podem se sobrepor, mas podem ficar lado a lado.
 - Cada navio é posicionado uma única vez.
@@ -65,7 +73,7 @@ desafio_batalha_naval/
 ### Funções (`batalha-naval.js`)
 
 | Função | O que faz |
-| --- | --- |
+|---|---|
 | `criarTabuleiro()` | Cria um tabuleiro 10 x 10 vazio. |
 | `posicaoValida(linha, coluna)` | Confere se a posição é inteira e está entre 0 e 9. |
 | `calcularPosicoes(nome, linha, coluna, orientacao)` | Lista as casas que o navio ocuparia, ou `null` se não cabe. |
@@ -80,7 +88,7 @@ desafio_batalha_naval/
 ## Grupos de testes
 
 | Grupo | O que verifica |
-| --- | --- |
+|---|---|
 | Constantes do jogo | Tabuleiro de tamanho 10, 4 navios com tamanhos 5, 4, 3 e 2, total de 14 casas. |
 | Criação do tabuleiro 10 x 10 | 10 linhas, 10 colunas, 100 casas, tudo vazio e tabuleiros independentes. |
 | `posicaoValida` | Cantos aceitos e valores fora do intervalo, não inteiros ou de outro tipo recusados. |
@@ -94,5 +102,3 @@ desafio_batalha_naval/
 | `novoJogo` | Dois tabuleiros com 4 navios, nomes válidos e estado inicial. |
 | `jogarTiro` | Tiro no tabuleiro do adversário, alternância de vez, tiro repetido ou inválido e mensagens. |
 | Vitória na partida | Vitória de cada jogador, bloqueio de tiros após o fim e 100 partidas aleatórias completas. |
-
-
