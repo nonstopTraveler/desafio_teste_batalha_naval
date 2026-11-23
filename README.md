@@ -1,6 +1,6 @@
-# Desafio de Testes de Software: Batalha Naval
+# Desafio Batalha Naval
 
-Projeto de Testes de Software. É um jogo de Batalha Naval para duas pessoas no mesmo dispositivo, que roda no navegador, com a lógica em JavaScript e casos de teste automatizados que garantem que as regras funcionam.
+Projeto da disciplina de Projeto, Implementação e Teste de Software. É um jogo de Batalha Naval para duas pessoas no mesmo dispositivo, que roda no navegador, com a lógica em JavaScript e casos de teste automatizados que garantem que as regras funcionam.
 
 ## Regras implementadas
 
